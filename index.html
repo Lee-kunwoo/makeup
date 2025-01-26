@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="http://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Sharp:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200">
+<title>마크업</title>
+<style>
+*{padding: 0; margin: 0; box-sizing: border-box;}
+/* 기본: 모바일 */
+header{
+height: 50px;
+width: 100vw; /* 모바일 화면의 100% 너비 */
+overflow-x: hidden; /* 가로 스크롤 방지 */
+margin: auto;
+border: 1px solid red;
+position: relative;
+text-align: center; 
+}
+nav {
+display: flex;
+justify-content: center; 
+padding: 10px; /* 모바일에서 내부 여백 축소 */
+gap: 10px; /* 모바일에서 요소 간 간격 최소화 */
+/*overflow: hidden;*/
+border: 1px solid blue;
+}
+nav a {
+margin: 5px; /* 여백 최소화 */
+padding: 3px 10px; /* 내부 패딩 최소화 */
+font-size: 12px; /* 글자 크기 축소 */
+border: 1px solid black; /* 테두리 두께 축소 */
+border-radius: 5px; /* 둥근 모서리 크기 축소 */
+background-color: rgb(92, 146, 11); 
+color:gold;
+transition: 1s;
+}
+nav a:hover{
+background-color: lightgreen;
+color: black;
+}
+main{
+width: 100%;
+height: 50vh; /* 화면 높이의 50% */
+border: 2px solid gold;
+}
+main section {
+border: 1px solid red; /* 기본 테두리 */
+margin: 15px; /* 여백 최소화 */
+padding: 10px; /* 내부 여백 최소화 */
+height: 45vh; /* 모바일에서 적절한 높이 */
+/*flex-direction: column; /* 세로 배치 */
+}
+main section h2 {
+border: 1px solid blue; /* 기본 테두리 */
+margin: 30px; /* 여백 유지 */
+padding: 5px; /* 내부 여백 유지 */
+text-align: center; /* 텍스트 중앙 정렬 */
+font-size: 1.2rem; /* 폰트 크기 작게 설정 */
+}
+#layout{
+display: none;
+background-size: cover;
+background-repeat: no-repeat;
+background-position: center;
+overflow: hidden; 
+}
+/* 태블릿 */ 
+@media (min-width: 768px) {
+header{
+height: 70px;
+/*overflow-x: hidden; /* 가로 스크롤 방지 */
+}
+nav{
+/*display: flex;
+flex-direction: row; /* 가로 정렬 유지 */
+justify-content: space-evenly; /* 요소 간 동일한 간격 */
+padding: 15px; /* 태블릿에서 내부 여백 축소 */
+gap: 20px; /* 태블릿에서 요소 간 간격 축소 */
+}
+nav a{
+margin: 7px; /* 여백 축소 */
+padding: 4px 15px; /* 내부 패딩 축소 */
+font-size: 14px; /* 글자 크기 축소 */
+border: 1.5px solid black; /* 테두리 두께 축소 */
+border-radius: 8px; /* 둥근 모서리 크기 축소 */
+}
+main{
+/*width: 100%;*/
+height: 400px; /* 태블릿에서는 높이를 줄임 */
+}
+main section {
+border: 1.5px solid red; /* 테두리 약간 축소 */
+/*margin: 1px; /* 여백 조정 */
+/*padding: 15px; /* 내부 여백 조정 */
+height: 50vh; /* 태블릿 높이 설정 */
+flex-direction: row; /* 가로 배치 유지 */
+}
+main section h2 {
+border: 1.5px solid blue; /* 테두리 두께 조정 */
+/*margin: 32px; /* 여백 축소 */
+/*padding: 8px; /* 내부 여백 조정 */
+/*text-align: center; /* 텍스트 중앙 정렬 유지 */
+font-size: 1.5rem; /* 폰트 크기 약간 축소 */
+} 
+#layout{
+display: none;
+background-image: cover;
+background-repeat: no-repeat;
+background-position: center;
+overflow: hidden;      
+}
+}
+/* PC */
+@media (min-width: 1200px) {
+header{
+height:90px ;
+/*width: 100vw; /* PC 화면의 100% 너비 */
+}
+nav{
+/*display: flex;*/
+justify-content: space-between;
+/*align-items: center;*/
+padding:10px;
+gap: 10px;
+}
+nav a {
+margin: 30px 20px 20px;
+padding: 20px 20px 20px;
+border: 2px solid black;
+border-radius: 10px;
+/*font-size: 16px; /* 기본 글자 크기 */
+}
+nav .model{
+margin-top: 10px ;
+background-image: cover;
+background-repeat: no-repeat;
+background-position: center;
+overflow: hidden;
+cursor: pointer;
+}
+main{
+/*width: 100%;*/
+height: 500px; 
+}
+/*main section {    
+border: 2px solid red; /* 테두리 강조 */
+/*margin: 20px; /* 여백 확대 */
+/*padding: 20px; /* 내부 여백 확대 */
+/*height: 60vh; /* 높이 확대 */
+/*}*/
+main section h2 {
+border: 2px solid blue; /* 테두리 두께 증가 */
+margin: 35px; /* 여백 확대 */
+/*padding: 10px; /* 내부 여백 확대 */
+/*text-align: center; /* PC 환경에서는 왼쪽 정렬 */
+font-size: 1.8rem; /* 폰트 크기 확대 */
+}
+#layout{
+display: none;
+background-image: cover;
+background-repeat: no-repeat;
+background-position: center;
+overflow: hidden;    
+}
+/* model */
+.menuModal {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: red;
+  z-index: 1000;
+}
+.menuModal.on {
+  display: flex;
+}
+.modal {
+  width: 1000px;
+  height: 500px;
+}
+.modal > div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 45px;
+  display: flex;
+  color: #fff;
+  padding-bottom: 20px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.7);
+  font-weight: bolder;
+}
+.xi-close {
+  font-size: 32px;
+  transition: 0.5s;
+}
+.xi-close:hover {
+  cursor: pointer;
+  transform: rotate(360deg);
+}
+.modalMenu {
+  display: flex;
+  position: relative;
+  top: 50px;
+  justify-content: space-between;
+  color: #fff;
+  height: 50%;
+  padding: 0 10px;
+}
+.modalMenu > li > a {
+  font-size: 28px;
+  font-weight: bolder;
+}
+.modalMenu a {
+  color: #fff;
+}
+.modalMenuList {
+  padding: 20px 0;
+}
+.modalMenuList > li {
+  padding: 10px 0;
+  font-size: 20px;
+}
+.modalMenuList > li:hover {
+  cursor: pointer;
+}
+section {
+  position: relative;
+  width: 100%;
+  height: 700px;  
+}
+}
+</style>
+</head>
+<body>
+    <header>
+        <h1>반응형웹</h1>
+    </header>
+    <nav>
+        <a href="#">메뉴1</a>
+        <a href="#">메뉴2</a>
+        <a href="#">메뉴3</a>
+        <a href="#">메뉴4</a>
+        <div class="model">
+            <img src="images/menu.png" alt="'model">
+        </div>
+    </nav>
+    <main>
+        <section>
+        <h2>정보구역1</h2>
+        <h2>정보구역2</h2>
+        <h2>정보구역3</h2>
+        <div id='layout'>
+        <img src="images/layout.jpg" alt="city">    
+        </div> 
+        </section>
+    </main>
+    <footer>
+        <p>푸터</p>
+    </footer>
+    <section id="popup">
+        <h3>공지사항</h3>
+    </section>
+    <!-- 모달 박스 시작 -->
+    <div class="menuModal">
+        <div class="modal">
+          <div>
+            <div>SITE MAP</div>
+            <div class="xi-close"></div>
+          </div>
+          <ul class="modalMenu">
+            <li>
+              <a href="#">회사소개</a>
+              <ul class="modalMenuList">
+                <li>인사말</li>
+                <li>사회공헌</li>
+                <li>연혁</li>
+                <li>윤리경영</li>
+              </ul>
+            </li>
+            <li>
+              <a href="#">사업분야</a>
+              <ul class="modalMenuList">
+                <li>엘리트 학생복</li>
+                <li>윌비 플레이</li>
+                <li>윌비 워크웨어</li>
+                <li>자회사</li>
+              </ul>
+            </li>
+            <li>
+              <a href="#">IR</a>
+              <ul class="modalMenuList">
+                <li>전자공고</li>
+                <li>대차대조표</li>
+                <li>손익계산서</li>
+                <li>보도자료</li>
+              </ul>
+            </li>
+              <a href="#">Contact</a>
+              <ul class="modalMenuList">
+                <li>오시는길</li>
+                <li>고객문의</li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+  <!-- 모달 박스 끝 -->
+<script>  
+document.addEventListener("DOMContentLoaded", () => {
+    const navLinks = document.querySelectorAll('nav a');
+    const infoSections = document.querySelectorAll('main section h2');
+    const layout = document.getElementById('layout');
+
+    navLinks.forEach((link, index) => {
+        link.addEventListener('click', (event) => {
+            event.preventDefault(); // 기본 동작 방지
+
+            // 모든 h2 요소의 배경 초기화
+            infoSections.forEach(h2 => h2.style.background = '');
+
+            if (index < infoSections.length) {
+                // 선택된 h2 요소에 배경 색상 적용
+                const colors = ['gold', 'green', 'red'];
+                infoSections[index].style.background = colors[index];
+                layout.style.display = 'none'; // layout 요소 숨기기
+            } else {
+                // 버튼 4 클릭 시 layout 요소 표시
+                layout.style.display = 'block';
+            }
+        });
+    });
+
+    const xiBars = document.querySelector(".model");
+    const menuModal = document.querySelector(".menuModal");
+    const xiClose = document.querySelector(".xi-close");
+
+    xiBars.addEventListener("click", () => {
+        menuModal.classList.add("on");
+    });
+
+    xiClose.addEventListener("click", () => {
+        menuModal.classList.remove("on");
+    });
+});
+</script>
+
+</body>
+</html>
